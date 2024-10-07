@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 40px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+#search-input {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Movie Cards */
+#movie-list, #favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.movie-card {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover img {
+    opacity: 0.8;
+}
+
+.movie-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.movie-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button Styles */
+button, .more-info {
+    padding: 12px 25px; /* Adjusted padding for proper sizing */
+    border-radius: 50px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    display: block; /* Ensure buttons are block elements */
+    margin: 10px auto; /* Center the buttons and add margin */
+    width: 80%; /* Set width of buttons */
+    text-decoration: none;
+}
+
+button:hover, .more-info:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Add subtle animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.movie-card {
+    animation: fadeIn 0.5s ease;
+}
+
+nav {
+    animation: fadeIn 1s ease;
+}
